@@ -3,6 +3,7 @@
     {
       "id": "n0",
       "label": "A node",
+      "color": "green",
       "size": 3
     },
     {
