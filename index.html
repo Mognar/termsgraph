@@ -9,6 +9,8 @@
 </style>
 </head>
 <body>
+  <h1 align="center">Parliament's Thesaurus Visualised</h1>
+  <h2 align="center">Well, some of it. Organisations, Names and Legislation only appear in this graph if they link to an ID or Subject node</h2>
 <div id="graph-container"></div>
 <script src="sigma.js"></script>
 <script src="plugins/sigma.parsers.json.min.js"></script>
@@ -18,7 +20,6 @@
 <script src="plugins/sigma.plugins.relativeSize.min.js"></script>
 <script src="plugins/sigma.layout.fruchtermanReingold.js"></script>
 <script src="plugins/sigma.plugins.animate.min.js"></script>
-<script src="plugins/sigma.layout.noverlap.min.js"></script>
 <script>
 var g = {
         nodes: [],
@@ -67,25 +68,6 @@ var g = {
 
             // Refresh the display:
             //s.refresh();
-            var noverlapListener = s.configNoverlap({
-              nodeMargin: 0.1,
-              scaleNodes: 1.05,
-              gridSize: 75,
-              easing: 'quadraticInOut', // animation transition function
-              duration: 10000   // animation duration. Long here for the purposes of this example only
-            });
-            // Bind the events:
-            noverlapListener.bind('start stop interpolate', function(e) {
-              console.log(e.type);
-              if(e.type === 'start') {
-                console.time('noverlap');
-              }
-              if(e.type === 'interpolate') {
-                console.timeEnd('noverlap');
-              }
-            });
-            // Start the layout:
-            s.startNoverlap();
             // ForceAtlas Layout
             s.startForceAtlas2({worker: true});
             setTimeout(function(){
