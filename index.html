@@ -102,8 +102,8 @@ var g = {
 
                     s.graph.nodes().forEach(function(n) {
                       if (toKeep[n.id]) {
+                        s.settings('drawLabels', true);
                         n.color = '#333';
-                        drawingProperties({labelThreshold: 0});
                         minNodeSize: 10;}
                       else {
                         n.color = "rgba(190,190,190,0.2)"; }
