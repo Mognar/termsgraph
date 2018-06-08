@@ -103,7 +103,7 @@ var g = {
                     s.graph.nodes().forEach(function(n) {
                       if (toKeep[n.id]) {
                         drawLabels: true;
-                        labelThreshold: 0;
+                        n.labelThreshold: 0;
                         n.color = '#333';
                         minNodeSize: 10;}
                       else {
