@@ -53,7 +53,8 @@ var g = {
     type: 'canvas'
    },
    settings: {
-    minNodeSize: 2
+    minNodeSize: 2,
+    labelThreshold: 0
    }
    });
 
@@ -102,8 +103,6 @@ var g = {
 
                     s.graph.nodes().forEach(function(n) {
                       if (toKeep[n.id]) {
-                        drawLabels: true;
-                        n.labelThreshold: 0;
                         n.color = '#333';
                         minNodeSize: 10;}
                       else {
