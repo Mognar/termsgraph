@@ -146,7 +146,10 @@ var greyColor = '#666';
                       if (toKeep[n.id]) {
                         n.color = '#333';
                         s.settings('drawLabels', true);
-                        minNodeSize = minNodeSize * 4;}
+                        var maxNodeSize = s.settings('maxNodeSize');
+                         maxNodeSize = maxNodeSize + 1
+                         s.settings('maxNodeSize', maxNodeSize);
+                         s.refresh();}
                       else {
                         n.color = "rgba(190,190,190,0.2)"; }
                     });
