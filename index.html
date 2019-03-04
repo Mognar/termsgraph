@@ -145,14 +145,14 @@ var greyColor = '#666';
                       if (toKeep[n.id]) {
                         n.color = '#333';
                         s.settings('drawLabels', true);
-                        minNodeSize: 30;}
+                        minNodeSize: 8;}
                       else {
                         n.color = "rgba(190,190,190,0.2)"; }
                     });
 
                     s.graph.edges().forEach(function(e) {
                       if (toKeep[e.source] && toKeep[e.target])
-                        e.color = '#000';
+                        e.color = '#bc7634';
                       else
                         e.color = "rgba(190,190,190,0.0)";
                     });
